@@ -18,8 +18,8 @@ acceleration   = resultant_force / m
 
 for t in range(0,6):
 
-    print( "t={}s".format(t).rjust(     column_widths[0] ),end=" ")
-    print("10N".rjust(                  column_widths[1] ),end=" ")
+    print( "t={}s".format(t).rjust(     column_widths[0]  ),end=" ")
+    print("{}N".format(G).rjust(        column_widths[1]  ),end=" ")
     print( str(v).rjust(                column_widths[2]  ),end=" ")    
     print( str(drag_force) .rjust(      column_widths[3]  ),end=" ")   
     print( str(resultant_force).rjust(  column_widths[4]  ),end=" ")   
@@ -31,19 +31,18 @@ for t in range(0,6):
     # calc  next second
     v = v + acceleration
     #阻力每秒增加2N
-    drag_force += 2
+    drag_force += 0.2*G
     resultant_force= G - drag_force
     acceleration   = resultant_force / m
 
 
     
 print("-"*140)    
-print( " ".format(t).rjust(             column_widths[0] ),end=" ")
-print("G=mg".rjust(                     column_widths[1] ),end=" ")
-print("v1=v0+a".rjust(                  column_widths[2]  ),end=" ")    
-print("+2N/s" .rjust(                   column_widths[3]  ),end=" ")   
-print("Fr = G - drag force".rjust(         column_widths[4]  ),end=" ")   
-print("a = resultant force / m".rjust(     column_widths[5]  ))   
-
+print( " ".format(t).rjust(                 column_widths[0]  ),end=" ")
+print("G=mg".rjust(                         column_widths[1]  ),end=" ")
+print("v1=v0+a".rjust(                      column_widths[2]  ),end=" ")    
+print("+{}N/s".format(0.2*G) .rjust(        column_widths[3]  ),end=" ")   
+print("Fr = G - drag force".rjust(          column_widths[4]  ),end=" ")   
+print("a = resultant force / m".rjust(      column_widths[5]  ))   
 
 
