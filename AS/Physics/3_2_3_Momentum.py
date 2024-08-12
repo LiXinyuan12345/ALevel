@@ -24,8 +24,8 @@ def elastic_collision(m1,u1,m2,u2, v1):
         print("---> inelastic collision")
 
 
-elastic_collision(m1=7.9, u1=0 , m2=2.7, u2=10, v1=5.1 )
-#elastic_collision(m1=0.4, u1=0.36 , m2=0.4, u2=-0.36, v1=-0.36 )
+#elastic_collision(m1=7.9, u1=0 , m2=2.7, u2=10, v1=5.1 )
+elastic_collision(m1=0.4, u1=0.36 , m2=0.4, u2=-0.36, v1=-0.36 )
 print()
 print()
 #elastic_collision(m1=0.14, u1=3.54 , m2=0.62, u2=0, v1=0 )
