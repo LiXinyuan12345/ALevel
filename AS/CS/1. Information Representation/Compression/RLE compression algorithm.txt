@@ -1,0 +1,13 @@
+RLE的基本思想是对数据中的连续重复元素进行压缩。
+
+压缩前原始数据：
+AAAABBBCCDAA            12个字符，ascii charset，占用12Bytes
+
+RLE压缩后数据:
+4A3B2C1D2A                   10个字符，ascii charset，占用10Bytes
+
+4A 表示有4个连续的 A 字符
+3B 表示有3个连续的 B 字符
+2C 表示有2个连续的 C 字符。
+1D 表示有1个 D 字符
+2A 表示有2个连续的 A 字符

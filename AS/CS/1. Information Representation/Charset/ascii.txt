@@ -1,0 +1,3 @@
+This is ascii charset:                 ABCabc123 +-*/"
+This is extend ascii charset:   ±©ƒ€µ£¼½
+
