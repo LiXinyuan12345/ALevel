@@ -75,3 +75,82 @@ def  CalcQuartilesAndRange(data):
     interquartile_range = upper_quatile - lower_quatile
     return lower_quatile,upper_quatile,interquartile_range
     
+#------------------------------------------------------
+#  Ungroupd Data FreqTable
+#
+#   data:  37 37.5 38 38.5 39 39.5 40 40.5 41
+#   freq:  3   3   12  5   16  9    7  4    1  
+#
+#------------------------------------------------------
+def CalcUngroupedFreqTable(data,frequncy):
+    
+    # find mode
+    max_freq = frequncy[0]
+    mode     = data[0]
+    for i in range(1,len(data)):
+        if max_freq < frequncy[i]:
+            max_freq = frequncy[i]
+            mode     = data[i]
+
+    # find mean
+    sum = 0
+    cnt = 0 
+    for i in range(len(data)):
+        sum += data[i] * frequncy[i]
+        cnt += frequncy[i]
+    mean = sum/cnt
+
+    # find median
+    median = 0
+    median_pos = (cnt+1)/2
+    freq_sum   = 0
+    for i in range(len(frequncy)):  
+        freq_sum += frequncy[i]  
+        if median_pos <= freq_sum:
+            median = data[i] 
+            break
+
+    return mode,mean,median
+
+
+#------------------------------------------------------
+#  Groupd Data FreqTable
+#
+#       data                freq
+#  150 <= x < 155            3
+#  155 <= x < 160            5
+#  160 <= x < 165            9
+#  165 <= x < 170            7
+#  170 <= x < 175            1 
+#
+#------------------------------------------------------
+def CalcgroupedFreqTable(data,frequncy):
+
+    # find mode
+    max_freq = frequncy[0]
+    mode     = data[0]
+    for i in range(1,len(data)):
+        if max_freq < frequncy[i]:
+            max_freq = frequncy[i]
+            mode     = data[i]
+
+    # find mean
+    sum = 0
+    cnt = 0 
+    for i in range(len(data)):
+        mean_v_i = (data[i][0] + data[i][1])/2
+        sum += mean_v_i * frequncy[i]
+        cnt += frequncy[i]
+    mean = sum/cnt
+
+    # find median
+    median = 0
+    median_pos = (cnt+1)/2
+    freq_sum   = 0
+    for i in range(len(frequncy)):  
+        freq_sum += frequncy[i]  
+        if median_pos <= freq_sum:
+            median = data[i] 
+            break
+
+    return mode,mean,median
