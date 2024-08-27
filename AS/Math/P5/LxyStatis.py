@@ -1,4 +1,5 @@
 import copy
+import math
 
 #------------------------------
 # 计算平均数
@@ -154,3 +155,44 @@ def CalcgroupedFreqTable(data,frequncy):
             break
 
     return mode,mean,median
+
+#------------------------------------------------------
+#  
+#   方差、标准差
+#
+#  variance = Σx²/n - x̄²
+#
+#------------------------------------------------------
+def CalcVarianceAndSD(data):
+    
+    mean = CalcMean(data)
+    sigma = 0
+    for v in data:
+        sigma += v * v
+    variance = sigma / len(data) - mean * mean
+    standard_deviation = math.sqrt(variance)
+    return mean, variance,standard_deviation
+
+#------------------------------------------------------
+#
+#  Ungroupd Data FreqTable 方差、标准差
+#
+#   data:  37 37.5 38 38.5 39 39.5 40 40.5 41
+#   freq:  3   3   12  5   16  9    7  4    1  
+#
+#  Variance = Σx²f/Σf - x̄²
+#------------------------------------------------------
+def CalcUngroupedVarianceAndSD(data,frequncy):
+
+    _,mean,_= CalcUngroupedFreqTable(data,frequncy)
+
+    sigma_xxf = 0
+    sigma_f   = 0 
+    for i in range(len(data)):
+       sigma_xxf += data[i]* data[i]* frequncy[i]
+       sigma_f   += frequncy[i]
+
+    variance = sigma_xxf/sigma_f - mean * mean
+    standard_deviation = math.sqrt(variance)
+    return mean, variance,standard_deviation
+
