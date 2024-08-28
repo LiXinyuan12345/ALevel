@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class C1_1_1_MeanModeMedian {
   
   public static void main(String[] args) {
   Scanner input = new Scanner(System.in);
