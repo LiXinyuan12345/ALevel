@@ -1,0 +1,47 @@
+//
+//    过程(PROCEDURE)和函数(FUNCTION)的区别是： PROCEDURE不会返回值，而FUNCTION会
+//
+//    函数定义：
+//
+//      FUNCTION  function_name( param1: datatype , param2: datatype ....) RETURNS datatype
+//              ....
+//              RETURN var
+//      ENDFUNCTION
+//
+
+FUNCTION max_abc(a: INTEGER, b:INTEGER, c: INTEGER) RETURNS INTEGER
+
+    DECLARE v : INTEGER
+
+    v <- a
+    IF b > v THEN
+      v <- b
+    ENDIF
+
+    IF c > v THEN
+      v <- c
+    ENDIF
+
+
+    RETURN v    
+ENDFUNCTION
+
+//
+//    过程调用：
+//
+//    var_name <- function_name( param1 , param2 ....)
+//
+DECLARE a : INTEGER
+DECLARE b : INTEGER
+DECLARE c : INTEGER
+DECLARE max_v : INTEGER
+
+OUTPUT "a:"
+INPUT a
+OUTPUT "b:"
+INPUT b
+OUTPUT "c:"
+INPUT c
+
+max_v <- max_abc(a,b,c)
+OUTPUT "max_abc=",max_v

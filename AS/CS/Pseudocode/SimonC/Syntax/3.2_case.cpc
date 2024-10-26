@@ -1,0 +1,21 @@
+//
+//  判断
+//
+//  CASE OF var_name
+//  1:   ....
+//  2:   ....
+//  5:   ....     
+//  OTHERWISE: ....
+//  ENDCASE
+//
+DECLARE choice : INTEGER
+
+INPUT choice
+CASE  OF choice
+1 :  OUTPUT "Word is starting...."
+2 :  OUTPUT "Excel is starting...."
+//3:   OUTPUT "PowerPoint is starting...."
+//4:   OUTPUT "goodbye!"
+//OTHERWISE
+ENDCASE 
+

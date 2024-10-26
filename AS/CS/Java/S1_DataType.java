@@ -1,4 +1,3 @@
-import java.util.*;
 import java.util.Date;
 import java.io.*;
 
@@ -77,7 +76,10 @@ public class S1_DataType {
         |        |               +---+---+---+---+---+---+---+---+ 
         +--------+                              127                 dec 
        */
-       System.out.println("byte:\t"+ Byte.SIZE/8 + "bytes,\t Range=[" + d.bMin+ " , "+ d.bMax +"]"  );  
+       //System.out.println("byte:\t"+ Byte.SIZE/8 + "bytes,\t Range=[" + d.bMin+ " , "+ d.bMax +"] "  );  
+       System.out.printf("byte:\t%d bytes, Range=[%10d , %10d]",  Byte.SIZE/8, d.bMin,d.bMax);  
+       System.out.printf("  Hex Range=[%8X , %8X]   Bin Range[%s, %s]\n", 
+                        d.bMin,d.bMax, Integer.toBinaryString(d.bMin&0xff),Integer.toBinaryString(d.bMax));
  
        /* short  
         +--------+--------+                        7f        |     ff                     ff       |      ff          hex  
@@ -86,7 +88,9 @@ public class S1_DataType {
         |        |        |                  +---+---+---+---+---+---+---+---+     +---+---+---+---+---+---+---+---+  
         +--------+--------+                                 127                  *                256                 dec        
        */
-       System.out.println("short:\t"+ Short.SIZE/8 + "bytes,\t Range=[" + d.sMin+ " , "+ d.sMin +"]"  );  
+       System.out.printf("short:\t%d bytes, Range=[%10d , %10d]",  Short.SIZE/8, d.sMin,d.sMax);  
+       System.out.printf("  Hex Range=[%8X , %8X]   Bin Range[%s, %s]\n",
+                        d.sMin,d.sMax, Integer.toBinaryString(d.sMin&0xffff),Integer.toBinaryString(d.sMax));    
  
        /* int                                                    7f        |     ff                     ff       |      ff          hex      
         +--------+--------+--------+--------+              +---+---+---+---+---+---+---+---+     +---+---+---+---+---+---+---+---+   
@@ -97,8 +101,9 @@ public class S1_DataType {
                                                                  ff        |     ff                     ff       |      ff          hex  
                                                                                                             127 * 256 *256 * 256    dec
        */
-       System.out.println("int:\t"+ Integer.SIZE/8 + "bytes,\t Range=[" + d.iMin+ " , "+ d.iMax +"]"  );  
- 
+      System.out.printf("integer:\t%d bytes, Range=[%10d , %10d]",  Integer.SIZE/8, d.iMin,d.iMax);  
+      System.out.printf("  Hex Range=[%8X , %8X]   Bin Range[%s, %s]\n",
+                       d.iMin,d.iMax, Integer.toBinaryString(d.iMin&0xffffffff),Integer.toBinaryString(d.iMax));    
        /* long  
         +--------+--------+--------+--------+--------+--------+--------+--------+
         |        |        |        |        |        |        |        |        |
@@ -106,9 +111,7 @@ public class S1_DataType {
         |        |        |        |        |        |        |        |        |
         +--------+--------+--------+--------+--------+--------+--------+--------+
        */
-       System.out.println("long:\t"+ Double.SIZE/8 + "bytes,\t Range=[" + d.lMin+ " , "+ d.lMin +"]"  );  
-       System.out.println();  
-
+   
 
 
  

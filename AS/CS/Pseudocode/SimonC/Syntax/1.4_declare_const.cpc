@@ -1,0 +1,12 @@
+//
+//      CONSTANT  var_name <- value
+//
+CONSTANT PI <- 3.1415926                        // REAL
+CONSTANT NUM_OF_MONTH <- 12                     // INTEGER
+CONSTANT WELCOME_STRING <- "Welcome to WHBC"    // STRING
+CONSTANT GRADE_A <- 'A'                         // CHAR     
+
+OUTPUT "PI =",               PI
+OUTPUT "NUM_OF_MONTH =",     NUM_OF_MONTH
+OUTPUT "WELCOME_STRING =",   WELCOME_STRING
+OUTPUT "GRADE_A =",          GRADE_A

@@ -1,0 +1,13 @@
+// basic data type:     
+//      DECLEAR  var_name: data type
+DECLARE int_v : INTEGER
+DECLARE chr_v : CHAR
+DECLARE real_v: REAL
+DECLARE str_v:  STRING
+DECLARE bool_v: BOOLEAN
+
+OUTPUT "input a integer"
+INPUT  int_v
+
+OUTPUT "input a string"
+INPUT  str_v

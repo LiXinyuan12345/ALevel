@@ -1,0 +1,44 @@
+//
+//  简单条件判断语法
+//
+//  IF condition THEN
+//        .....
+//  ENDIF
+//
+//
+//  IF condition THEN
+//        .....
+//  ELSE
+//        ..... 
+//  ENDIF
+//
+
+
+
+//
+//  嵌套条件判断语法
+//
+//  IF condition1 THEN
+//        IF condition2 THEN
+//           .....
+//        ELSE
+//           ..... 
+//        ENDIF
+//        .....
+//  ELSE
+//        ..... 
+//  ENDIF
+//
+DECLARE  v : INTEGER
+
+INPUT v
+IF v <= 0 THEN
+    IF v = 0 THEN
+        OUTPUT "zero"
+    ELSE
+        OUTPUT "negative number"
+    ENDIF
+
+ELSE
+    OUTPUT v
+ENDIF

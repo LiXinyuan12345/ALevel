@@ -1,0 +1,13 @@
+//
+//  WHILE  condition DO
+//      ....
+//  ENDWHILE
+//
+
+DECLARE num:INTEGER
+
+num <- -1
+WHILE num <=0 DO
+    OUTPUT "Please input a positive number:"
+    INPUT num
+ENDWHILE 

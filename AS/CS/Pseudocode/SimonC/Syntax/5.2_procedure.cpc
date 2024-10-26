@@ -1,0 +1,39 @@
+//
+//    过程(PROCEDURE)和函数(FUNCTION)的区别是： PROCEDURE不会返回值，而FUNCTION会
+//
+//    过程定义：
+//
+//      PROCEDURE  procedure_name( param1: datatype , param2: datatype ....)
+//              ....
+//      ENDPROCEDURE
+//
+PROCEDURE print_choice(choice: INTEGER)
+
+    IF choice = 1 THEN
+        OUTPUT "1. Word"
+    ENDIF
+
+    IF choice = 2 THEN
+        OUTPUT "2. Excel"
+    ENDIF
+
+    IF choice = 3 THEN
+        OUTPUT "3. PowerPoint"
+    ENDIF
+
+    IF choice = 4 THEN
+        OUTPUT "4. exit"
+    ENDIF
+ENDPROCEDURE
+
+//
+//    过程调用：
+//
+//     CALL procedure_name( param1 , param2 ....)
+//
+DECLARE choice : INTEGER
+REPEAT
+   OUTPUT "Input your choice(1-4), 0 exit:" 
+   INPUT  choice
+   CALL print_choice(choice)
+UNTIL choice=0

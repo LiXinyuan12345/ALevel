@@ -1,0 +1,9 @@
+//
+//      INPUT   var_name
+//      OUTPUT  var_name | "..."
+//
+DECLARE number : INTEGER
+
+OUTPUT "Please input a number:"
+INPUT  number
+OUTPUT "You input the number is",number

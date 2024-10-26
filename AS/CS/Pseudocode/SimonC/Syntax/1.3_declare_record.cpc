@@ -1,0 +1,34 @@
+//  RECORD 声明语法
+//
+//  TYPE
+//  type_name
+//      DECLEAR  var1_name: data type
+//      DECLEAR  var2_name: data type
+//      .....
+//  ENDTYPE        
+//
+//  DECLARE var_name: type_name 
+
+TYPE
+AS_SCORE
+    DECLARE  student:       STRING
+    DECLARE  mathematics:   INTEGER
+    DECLARE  physics:       INTEGER
+    DECLARE  cs:            INTEGER
+    DECLARE  chinese:       INTEGER
+ENDTYPE
+
+// 单个学生成绩
+DECLARE me: AS_SCORE
+
+me.student <- "lxy"
+me.mathematics<- 99
+me.physics<- 92
+me.cs<- 98
+me.chinese<- 91
+OUTPUT me.student
+OUTPUT "    math=",me.mathematics,  "physics=",me.physics,"cs=",me.cs,"chinese=",me.chinese
+
+
+// PA13班所有学生成绩
+DECLARE pa13: ARRAY[1:35] OF AS_SCORE
