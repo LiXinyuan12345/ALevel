@@ -1,0 +1,33 @@
+// Simple IF statements
+// Max Score: 2 | Difficulty: Not Specified
+// For this challenge, write a program to take an integer as input, output what the number is, then check to see if the number is 10.
+
+// If it is 10, display the message "It's a match".
+
+// The expected input is:
+// An integer
+// e.g. 10
+// The expected output is:
+// "The number is 10"
+// "It's a match"
+
+// IF statements allow programmers to perform different blocks of code, depending on the current conditions/variable values inside of their programs.
+
+// The basic pseudocode syntax is :
+
+// IF <condition> THEN
+//   // code to be executed
+// END IF
+// In Java, it will look like this :
+
+// if(variable > 5){
+//   System.out.println("The number is greater than 5");
+// }
+DECLARE values:INTEGER
+INPUT values
+OUTPUT "The number is",values
+IF values=10 THEN
+    OUTPUT "It's a match"   
+ENDIF
+
+

@@ -1,0 +1,43 @@
+
+// Calculate points - exam question
+// Max Score: 4 | Difficulty: Not Specified
+// When a customer buys something, they are given points. Over time these points will accumulate and the customer can use them to get discounts/gifts etc.
+
+// Your challenge is to write a program to help calculate how many points a customer has earned for a given order. Points are earned if the customer spends $100 or more. If a customer has over 2000 points, the number of points they will receive is equal to 20% of their total value. Otherwise, they get 10% of what they spent. Points need to be rounded down to the nearest whole number.
+
+// Expected input:
+// Amount spent
+// Total points
+// e.g. 453.98
+// 2300
+// Expected output:
+// amount spent = 453.98
+// total points = 2300
+// points earned = 90
+
+// *20% of 453.98 = 90.796, which rounds down to 90
+// amount spent needs to be displayed in 2 decimal places, e.g. 100 = 100.00
+
+DECLARE spend:REAL
+DECLARE points : REAL
+DECLARE newpoints:REAL
+INPUT spend
+INPUT points
+newpoints<-0
+IF spend>=100 THEN
+  IF points>2000 THEN
+    newpoints<-spend*0.2
+    OUTPUT "amount spent = ",spend
+    OUTPUT "total points = ",points
+    OUTPUT "points earned = ",INT(newpoints)
+  ELSE
+    newpoints<-spend*0.1
+    OUTPUT "amount spent = ",spend
+    OUTPUT "total points = ",points
+    OUTPUT "points earned = ",INT(newpoints)
+  ENDIF
+ELSE
+    OUTPUT "amount spent = ",spend
+    OUTPUT "total points = ",points
+    OUTPUT "points earned = ",0
+ENDIF

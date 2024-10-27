@@ -1,26 +1,44 @@
 //
 // ARRAY 1D:   DECLEAR  var_name: ARRAY[LB:UB] OF data type
 //
-OUTPUT "Input 3 strings:"
-DECLARE ary1d:ARRAY[1:3] OF STRING
-FOR i <- 1 TO 3
-    INPUT ary1d[i]
-NEXT i
 
-OUTPUT ary1d[1],ary1d[2],ary1d[3]
+OUTPUT "INPUT 3 STRINGS:"
+DECLARE array_1d:ARRAY[1:3] OF STRING
+FOR i <-1 TO 3
+    INPUT array_1d[i]
+NEXT i
+OUTPUT array_1d[1],array_1d[2],array_1d[3]
+// OUTPUT "Input 3 strings:"
+// DECLARE ary1d:ARRAY[1:3] OF STRING
+// FOR i <- 1 TO 3
+//     INPUT ary1d[i]
+// NEXT i
+
+// OUTPUT ary1d[1],ary1d[2],ary1d[3]
 
 //
 // ARRAY 2D:   DECLEAR  var_name: ARRAY[ROW_LB:ROW_UB, COL_LB,COL_UB] OF data type
+OUTPUT "INPUT 6 NUMBERS:"
+DECLARE array_2d:ARRAY[1:3,1:2] OF STRING
+FOR r <-1 TO 3
+    FOR c <-1 TO 2
+        INPUT array_2d[r,c]
+    NEXT c
+NEXT r
+
+FOR op<-1 TO 3
+    OUTPUT array_2d[op,1],array_2d[op,2]
+NEXT op
 //
-OUTPUT "Input 6 number:"
-DECLARE ary2d:ARRAY[1:3,1:2] OF INTEGER
-FOR row <- 1 TO 3 
-    FOR col <-1 TO 2
-        INPUT ary2d[row,col]
-    NEXT col
-NEXT row
+// OUTPUT "Input 6 number:"
+// DECLARE ary2d:ARRAY[1:3,1:2] OF INTEGER
+// FOR row <- 1 TO 3 
+//     FOR col <-1 TO 2
+//         INPUT ary2d[row,col]
+//     NEXT col
+// NEXT row
 
-FOR row <- 1 TO 3 
-    OUTPUT ary2d[row,1],ary2d[row,2]
-NEXT row
-
+// FOR row <- 1 TO 3 
+//     OUTPUT ary2d[row,1],ary2d[row,2]
+// NEXT row
+`

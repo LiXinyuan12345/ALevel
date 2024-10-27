@@ -1,0 +1,45 @@
+
+// IF / ELSE IF
+// Max Score: 3 | Difficulty: Not Specified
+// Another common requirement is to be able to check for multiple conditions. This utilizes the ELSE IF construct.
+
+// The pseudocode for this looks like this:
+
+// IF <condition 1> THEN
+//   // code
+// ELSE IF <condition 2> THEN
+//   // code
+// ELSE IF <condition 3> THEN
+//   // code
+// ELSE
+//   // code
+// END IF
+// Write a program to perform the structured English description below:
+
+// INPUT a string
+// SELECT the 1st character
+// IF it's a letter, OUTPUT "It's a letter"
+// IF it's a number, OUTPUT "It's a number"
+// IF it's the space character, OUTPUT "It's a space"
+// OTHERWISE, OUTPUT "It's something else"
+// The expected input is:
+// A string
+// e.g. player
+// The expected output is:
+// "It's a letter"
+
+DECLARE str:STRING
+INPUT str
+IF str[1]>='0' AND str[1]<='9' THEN
+    OUTPUT "It's a number"
+ELSE 
+    IF (str[1]>='a' AND str[1]<='z') OR (str[1]>='A' AND str[1]<='Z') THEN
+        OUTPUT "It's a letter"
+    ELSE
+        IF str[1]=' ' THEN
+           OUTPUT "It's a space" 
+        ELSE 
+            OUTPUT "It's something else"
+        ENDIF 
+    ENDIF
+ENDIF

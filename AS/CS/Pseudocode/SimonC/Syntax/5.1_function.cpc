@@ -1,47 +1,74 @@
-//
-//    过程(PROCEDURE)和函数(FUNCTION)的区别是： PROCEDURE不会返回值，而FUNCTION会
-//
-//    函数定义：
-//
-//      FUNCTION  function_name( param1: datatype , param2: datatype ....) RETURNS datatype
-//              ....
-//              RETURN var
-//      ENDFUNCTION
-//
-
-FUNCTION max_abc(a: INTEGER, b:INTEGER, c: INTEGER) RETURNS INTEGER
-
-    DECLARE v : INTEGER
-
-    v <- a
-    IF b > v THEN
-      v <- b
-    ENDIF
-
-    IF c > v THEN
-      v <- c
-    ENDIF
+// //
+// //    过程(PROCEDURE)和函数(FUNCTION)的区别是： PROCEDURE不会返回值，而FUNCTION会
+// //
+// //    函数定义：
+// //
+// //      FUNCTION  function_name( param1: datatype , param2: datatype ....) RETURNS datatype
+// //              ....
+// //              RETURN var
+// //      ENDFUNCTION
+// //
+// FUNCTION cosx(REAL angle) RETURN REAL
+//   RETURN 0.5
+// ENDFUNCTION
 
 
-    RETURN v    
+// x <-cosx(20)
+
+// FUNCTION max_abc(a: INTEGER, b:INTEGER, c: INTEGER) RETURNS INTEGER
+
+//     DECLARE v : INTEGER
+
+//     v <- a
+//     IF b > v THEN
+//       v <- b
+//     ENDIF
+
+//     IF c > v THEN
+//       v <- c
+//     ENDIF
+
+
+//     RETURN v    
+// ENDFUNCTION
+
+// //
+// //    过程调用：
+// //
+// //    var_name <- function_name( param1 , param2 ....)
+// //
+// DECLARE a : INTEGER
+// DECLARE b : INTEGER
+// DECLARE c : INTEGER
+// DECLARE max_v : INTEGER
+
+// OUTPUT "a:"
+// INPUT a
+// OUTPUT "b:"
+// INPUT b
+// OUTPUT "c:"
+// INPUT c
+
+// max_v <- max_abc(a,b,c)
+// OUTPUT "max_abc=",max_v
+
+// FUNCTION moment(d:REAL,f:REAL) RETURNS REAL
+//   RETURN d*f
+// ENDFUNCTION
+
+// DECLARE moment1:REAL
+// DECLARE moment2:REAL
+// moment1<-moment(5,6)
+// OUTPUT moment1
+// moment2<-moment(2,10)
+// OUTPUT moment2
+// OUTPUT moment1-moment2
+
+FUNCTION suvt_a(u:REAL,v:REAL,t:REAL) RETURNS REAL
+ RETURN (v-u)/t
 ENDFUNCTION
 
-//
-//    过程调用：
-//
-//    var_name <- function_name( param1 , param2 ....)
-//
-DECLARE a : INTEGER
-DECLARE b : INTEGER
-DECLARE c : INTEGER
-DECLARE max_v : INTEGER
-
-OUTPUT "a:"
-INPUT a
-OUTPUT "b:"
-INPUT b
-OUTPUT "c:"
-INPUT c
-
-max_v <- max_abc(a,b,c)
-OUTPUT "max_abc=",max_v
+CONSTANT u1<-5
+CONSTANT v1<-10
+CONSTANT t1<-1
+OUTPUT suvt_a(u1,v1,t1+3)

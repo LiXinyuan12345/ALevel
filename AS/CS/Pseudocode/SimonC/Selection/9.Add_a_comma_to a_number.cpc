@@ -1,0 +1,38 @@
+
+// Add a comma to a number - exam question
+// Max Score: 4 | Difficulty: Not Specified
+// When dealing with currency, a comma is required to help group 3 digits together.
+
+// For example, 1000 = 1,000 | 1000000 = 1,000,000
+
+// Write a program that will take an integer as an input, calculate how many commas are needed, add them into the correct places, and output the result. A second input will contain a symbol that should be added to the front of the string, such as a $ symbol. If this input a space, add nothing to the front of the string.
+
+// Expected input:
+// An integer (1-8 digits long)
+// A character
+// e.g. 23456
+// $
+// Expected output:
+// $23,456
+
+DECLARE num:STRING
+DECLARE char:CHAR
+DECLARE len1:STRING
+DECLARE len2:STRING
+DECLARE len3:STRING
+INPUT num
+INPUT char
+IF LENGTH(num)>6 THEN
+  len3<-SUBSTRING(num,LENGTH(num)-2,3)
+  len2<-SUBSTRING(num,LENGTH(num)-5,3)
+  len1<-SUBSTRING(num,1,LENGTH(num)-6)
+  OUTPUT char,len1,len2,len3
+ELSE
+  IF LENGTH(num)>3 AND LENGTH(num)<7 THEN
+  len1<-SUBSTRING(num,1,LENGTH(num)-3)
+  len2<-SUBSTRING(num,LENGTH(num)-2,3)
+    OUTPUT char,len1,len2
+  ELSE 
+    OUTPUT char,num
+  ENDIF
+ENDIF

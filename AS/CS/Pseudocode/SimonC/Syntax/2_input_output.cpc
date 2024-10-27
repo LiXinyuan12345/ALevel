@@ -2,8 +2,13 @@
 //      INPUT   var_name
 //      OUTPUT  var_name | "..."
 //
-DECLARE number : INTEGER
+// DECLARE number : INTEGER
 
-OUTPUT "Please input a number:"
-INPUT  number
-OUTPUT "You input the number is",number
+// OUTPUT "Please input a number:"
+// INPUT  number
+// OUTPUT "You input the number is",number
+
+DECLARE number:INTEGER
+OUTPUT "enter a number"
+INPUT number
+OUTPUT "number is:",number

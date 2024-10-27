@@ -1,0 +1,30 @@
+
+// IF with an OR condition
+// Max Score: 2 | Difficulty: Not Specified
+// Sometimes, you may want to perform a block of code if either of two conditions are true. Then you can use an OR condition.
+
+// Write a program based on the following structured English:
+
+// INPUT a boolean flag
+// INPUT a string
+// CHECK the length of the string and the state of the flag
+// IF the string is longer than 6 characters OR the flag is true, ADD " WooHoo" to the back of the string
+// IF not, ADD " Bummer" to the end of the string
+// OUTPUT the string
+// The expected input is:
+// A boolean
+// A string
+// e.g. false
+// "Beach"
+// The expected output is:
+// "Beach Bummer"
+
+DECLARE flag : BOOLEAN
+DECLARE str : STRING
+INPUT flag
+INPUT str
+IF LENGTH(str)>6 OR flag=TRUE THEN
+    OUTPUT str, " WooHoo"
+    ELSE
+    OUTPUT str," Bummer"  
+ENDIF 

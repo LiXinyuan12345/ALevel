@@ -6,14 +6,20 @@
 //    condition为true时，不再继续循环
 //
 
-DECLARE choice : INTEGER
+// DECLARE choice : INTEGER
 
+// REPEAT
+//     OUTPUT "Menu\n-----------------------"
+//     OUTPUT "1. Word"
+//     OUTPUT "2. Excel"
+//     OUTPUT "3. PowerPoint"
+//     OUTPUT "4. exit"
+//     OUTPUT "Please input your choise:"
+//     INPUT choice
+// UNTIL choice>=1 AND choice <=4
+
+DECLARE choice:INTEGER
 REPEAT
-    OUTPUT "Menu\n-----------------------"
-    OUTPUT "1. Word"
-    OUTPUT "2. Excel"
-    OUTPUT "3. PowerPoint"
-    OUTPUT "4. exit"
-    OUTPUT "Please input your choise:"
+    OUTPUT "please enter your choice number:"
     INPUT choice
-UNTIL choice>=1 AND choice <=4
+UNTIL choice=0

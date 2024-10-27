@@ -29,16 +29,30 @@
 //        ..... 
 //  ENDIF
 //
-DECLARE  v : INTEGER
+// DECLARE  v : INTEGER
 
-INPUT v
-IF v <= 0 THEN
-    IF v = 0 THEN
-        OUTPUT "zero"
+// INPUT v
+// IF v <= 0 THEN
+//     IF v = 0 THEN
+//         OUTPUT "zero"
+//     ELSE
+//         OUTPUT "negative number"
+//     ENDIF
+
+// ELSE
+//     OUTPUT v
+// ENDIF
+DECLARE i:INTEGER
+OUTPUT "ENTER AN INTERGER:"
+INPUT i
+IF i<=0 THEN
+    IF i=0 THEN
+        OUTPUT "i equal to 0"
     ELSE
-        OUTPUT "negative number"
+        OUTPUT "i is smaller than 0"
     ENDIF
-
 ELSE
-    OUTPUT v
+    OUTPUT "i is bigger than 0"
 ENDIF
+
+

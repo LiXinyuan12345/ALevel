@@ -1,0 +1,52 @@
+
+// Nested IFs
+// Max Score: 2 | Difficulty: Not Specified
+// Nested IFs happen when we put an IF statement inside an IF statement.
+
+// The pseudocode looks like this:
+
+// IF <condition> Then
+//   IF <condition> THEN
+//     //code
+//   END IF
+//   //code
+// END IF
+// You can nest as many IFs as you want, but it is good practice to limit them to 3 or 4, or else they become difficult to read.
+
+// For this challenge, convert the pseudocode below into Java:
+
+// INPUT a number
+// INPUT a string
+// CHECK if the number is even
+// IF it is, CHECK if the string length is even
+// IF it is, OUTPUT "string length is even"
+// ELSE, OUTPUT "string length is odd"
+// Then OUTPUT "the number is even"
+// IF the number is odd, OUTPUT "the number is odd"
+// The expected input is:
+// An integer
+// A string
+// e.g. 6
+// "Smell my cheese"
+// The expected output is:
+// string length is odd
+// The number is even
+DECLARE num:INTEGER
+DECLARE str:STRING
+INPUT num
+INPUT str
+IF MOD(num,2)=0 THEN 
+    IF MOD(LENGTH(str),2)=0 THEN
+        OUTPUT  "string length is even"
+    ELSE
+        OUTPUT "string length is odd"
+    ENDIF
+    OUTPUT "the number is even"
+ELSE 
+    IF MOD(LENGTH(str),2)=0 THEN
+        OUTPUT  "string length is even"
+    ELSE
+        OUTPUT "string length is odd"
+    ENDIF
+    OUTPUT "the number is odd"
+ENDIF

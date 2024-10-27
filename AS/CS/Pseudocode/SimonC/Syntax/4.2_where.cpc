@@ -4,10 +4,18 @@
 //  ENDWHILE
 //
 
-DECLARE num:INTEGER
+// DECLARE num:INTEGER
 
-num <- -1
-WHILE num <=0 DO
-    OUTPUT "Please input a positive number:"
+// num <- -1
+// WHILE num <=0 DO
+//     OUTPUT "Please input a positive number:"
+//     INPUT num
+// ENDWHILE 
+
+DECLARE num:INTEGER
+num<-0
+WHILE num=0 DO
+    OUTPUT "enter a number bigger than 0"
     INPUT num
-ENDWHILE 
+    OUTPUT num
+ENDWHILE

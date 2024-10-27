@@ -1,0 +1,16 @@
+//
+//  字符串函数
+//
+//    LENGTH(str)
+//    SUBSTRING(str,4,1) 从第4个字符开始，截取一个长度的子字符串，返回
+//    UPPER(str)
+//    LOWER(str)
+//
+//  数值函数 
+//
+//   MOD(num, 2)     取模
+//   DIV(num, 2)     取商
+//   ROUND(real,2)   四舍五入2位小数
+//   RANDOM()        生成随机数
+//
+//

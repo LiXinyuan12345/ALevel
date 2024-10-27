@@ -1,7 +1,0 @@
-DECLARE number1 : INTEGER
-INPUT  number1
-number1 <- 10
-OUTPUT (number1)
-IF number1 = 10 THEN
-    OUTPUT("It's a match")
-ENDIF

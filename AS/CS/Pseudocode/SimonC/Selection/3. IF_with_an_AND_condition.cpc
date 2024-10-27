@@ -1,0 +1,25 @@
+
+// IF with an AND condition
+// Max Score: 2 | Difficulty: easy
+// We can use logical operators to make the conditions in an IF statement more complex/complete.
+
+// Write a program in Java, based on the following structured English:
+
+// INPUT a number
+// CHECK to see if the number is greater than 5 but less than or equal to 10
+// IF it is, MULTIPLY the number by 1.5
+// IF it isn't, MULTIPLY the number by 0.5
+// OUTPUT the result
+// The expected input is:
+// An integer
+// e.g. 8
+// The expected output is:
+// 12.0
+// if multiplying by 0.5, the output will require 1 decimal place, e.g. 3 will output 1.5, 12 will output 6.0
+DECLARE num:REAL
+INPUT num
+IF num>5 AND num<=10 THEN
+    OUTPUT num*1.5
+    ELSE
+        OUTPUT num*0.5
+ENDIF

@@ -1,0 +1,42 @@
+
+// IF / ELSE
+// Max Score: 2 | Difficulty: Not Specified
+// In almost all circumstances, an IF needs to be followed by an ELSE.
+// The ELSE block will be executed when the condition in the IF is false.
+
+// Convert the following structured English into Java:
+
+// INPUT a string
+// CHECK the type of the 4th character
+// IF it is a number, OUTPUT "The 4th character is a number"
+// IF it isn't, OUTPUT "The 4th character is not a number"
+// The expected input is:
+// A string
+// e.g. "12fdse45#$%"
+// The expected output is:
+// "The 4th character is not a number"
+
+// The pseudocode for the IF/ELSE structure is as follows:
+
+// IF <condition> THEN
+//   // code
+// ELSE
+//   // other code
+// END IF
+// In Java it will look like this:
+
+// if(num > 5){
+//   num = 0;
+// }else{
+//   num++;
+// }
+DECLARE str:STRING
+DECLARE chr:STRING
+INPUT str
+
+chr<-SUBSTRING(str,4,1)
+IF chr>='0' AND chr<='9' THEN
+    OUTPUT "The 4th character is a number"
+ELSE 
+    OUTPUT "The 4th character is not a number"
+ENDIF
