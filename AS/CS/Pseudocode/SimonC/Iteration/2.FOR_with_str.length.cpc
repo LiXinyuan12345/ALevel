@@ -1,0 +1,53 @@
+// FOR with str.length()
+// Max Score: 2 | Difficulty: Not Specified
+// More often than not, it isn't appropriate to hard code the value to be used in the FOR loop.
+
+// Depending on the data structure your program is using, there are different methods of getting a value to use. It will, however, revolve around the length of the structure.
+
+// We're going to keep it simple for now and stick to strings, utilizing str.length()
+
+// for(int x = 0; x < thisString.length(); x++){
+//   // code
+// }
+// The code above will execute the same number of times as there are characters in the string. This is very useful when validating a string, splitting a string manually based on a given character, etc.
+
+// Below is the structured English for this problem:
+
+// INPUT a string
+// SET index, numCount, letterCount, otherCount to 0
+// CHECK the character at index
+// INCREMENT the relevant count variable
+// INCREMENT index
+// REPEAT steps 3 to 5 while index is less than the length of the string
+// OUTPUT string " has " + numCount + " numbers, " + letterCount + " letters, and " + otherCount + " other characters"
+// Expected input
+// A string, e.g.
+// alan21$Dv#5g
+// Expected output
+// alan21$Dv#5g has 3 numbers, 7 letters, and 2 other characters
+
+DECLARE str:STRING
+DECLARE index : INTEGER
+DECLARE numCount:INTEGER
+DECLARE otherCount:INTEGER
+DECLARE letterCount : INTEGER
+DECLARE current_char : STRING
+index<-0
+numCount<-0
+letterCount<-0
+otherCount<-0
+INPUT str
+WHILE index<LENGTH(str)
+    index<-index+1
+    current_char<-SUBSTRING(str,index,1)
+    IF (current_char>='a'AND current_char<='z')OR (current_char>='A'AND current_char<='Z')  THEN
+        letterCount<-letterCount+1
+    ELSE 
+        IF current_char>='0' AND current_char<='9' THEN
+            numCount<-numCount+1  
+        ELSE
+            otherCount<-otherCount+1
+        ENDIF  
+    ENDIF   
+ENDWHILE
+OUTPUT str, " has " , numCount , " numbers, " , letterCount , " letters, and " , otherCount , " other characters"

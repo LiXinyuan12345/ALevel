@@ -1,0 +1,47 @@
+// Basic FOR loop
+// Max Score: 2 | Difficulty: Not Specified
+// The simplest kind of loop is the FOR loop, also known as a count-controlled loop.It will execute the code inside a set number of times.
+
+// The pseudocode is as follows:
+
+// FOR index ← 1 TO 10
+//   // code
+// NEXT index
+// In Java, they look like this:
+
+// for(int x = 0; x < 10; x++){
+//   // code
+// }
+// Let's break it down,
+
+// int x = 0; sets up a new variable that will contain the loop count. You can use it inside the code, and every loop it will change to the new count. When programming, it's normal to start counting at 0, not 1.
+// x < 10; this is the stop condtion, is x less than 10? If so, perform the next part of the statement. Change this part to reflect your needs.
+// x++ this means increase the value of x by 1. This will be done until x is no longer less than 10.
+// Write a program that follows the following structured English steps:
+
+// SET index to 0
+// INPUT a number
+// OUTPUT "index = " + index + " | number = " + number
+// REPEAT steps 2 and 3 while index is LESS THAN 4
+// Expected input:
+// 5 integers, 0 - 100, e.g.
+// 23
+// 65
+// 3
+// 8
+// 13
+// Expected output:
+// index = 0 | number = 23
+// index = 1 | number = 65
+// index = 2 | number = 3
+// index = 3 | number = 8
+// index = 4 | number = 13
+
+DECLARE index : INTEGER
+DECLARE number : INTEGER
+index<--1
+FOR i<-1 TO 5
+    index<-index+1
+    INPUT number
+    OUTPUT "index = " ,index, " | number = ",number
+NEXT i

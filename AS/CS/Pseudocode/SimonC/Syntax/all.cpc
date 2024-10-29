@@ -1,0 +1,137 @@
+//-----------------------------------------------
+//      变量声明
+//-----------------------------------------------
+
+// 声明简单类型变量： INTEGER / REAL / BOOLEAN / STRING / CHAR
+DECLEAR  var_name: data type
+
+// 声明 1D/2D Array
+DECLEAR  var_name: ARRAY[ROW_LB:ROW_UB] OF data type
+DECLEAR  var_name: ARRAY[ROW_LB:ROW_UB, COL_LB,COL_UB] OF data type
+
+// 定义/声明 RECORD 类型
+TYPE
+type_name
+    DECLEAR  var1_name: data type
+    DECLEAR  var2_name: data type
+    .....
+ENDTYPE  
+DECLARE var_name: type_name
+
+// 常量定义
+CONSTANT var_name <- value
+
+
+//-----------------------------------------------
+//      INPUT/OUTPUT
+//-----------------------------------------------
+
+INPUT  var_name
+OUTPUT var_name1,var_name2,string
+
+//-----------------------------------------------
+//      Selection
+//-----------------------------------------------
+
+//      IF
+IF condition1 THEN
+    IF condition2 THEN
+        .....
+    ELSE
+        ..... 
+    ENDIF
+    .....
+ELSE
+    ..... 
+ENDIF
+
+//      CASE
+CASE OF num
+  1 : OUTPUT "Option 1"
+  2 : OUTPUT "Option 2"
+  3 : OUTPUT "Option 3"
+  OTHERWISE : OUTPUT "invalid choice"
+ENDCASE
+
+//-----------------------------------------------
+//      Iteration
+//-----------------------------------------------
+
+// FOR
+FOR var_name <- 1 TO 10 [STEP 2]
+    ...
+NEXT var_name
+
+FOR row<- 1 TO 10
+    FOR col<- 1 TO 10
+        ...
+    NEXT col
+NEXT row
+
+// WHILE
+WHILE  condition DO
+    ....
+ENDWHILE
+
+// REPEAT
+REPEAT
+    .....
+UNTIL condition
+
+//--------------------------------------------------------------------------
+//      Function & Procedure
+// 
+// 过程(PROCEDURE)和函数(FUNCTION)的区别是： PROCEDURE不会返回值，而FUNCTION会
+//--------------------------------------------------------------------------
+
+// Function
+FUNCTION  function_name(param1: datatype , param2: datatype ....) RETURNS datatype
+        ....
+        RETURN var
+ENDFUNCTION
+ 
+var_name <- function_name(param1,param2)  // 调用Function
+
+// procedure
+PROCEDURE  procedure_name( param1: datatype , param2: datatype ....)
+        ....
+ENDPROCEDURE
+
+CALL procedure_name(param1,param2)  // 调用PROCEDURE
+
+
+//--------------------------------------------------------------------------
+//   伪代码内置Function
+//--------------------------------------------------------------------------
+
+// 字符串函数
+LEFT(ThisString : STRING, x : INTEGER) RETURNS STRING
+RIGHT(ThisString : STRING, x : INTEGER) RETURNS STRING
+MID(ThisString : STRING, x : INTEGER, y : INTEGER) RETURNS STRING
+LENGTH(ThisString : STRING) RETURNS INTEGER
+TO_UPPER(x : STRING|CHAR) RETURNS STRING|CHAR
+TO_LOWER(x : STRING|CHAR) RETURNS STRING|CHAR
+NUM_TO_STR(x : INTEGER|REAL) RETURNS INTEGER|REAL
+STR_TO_NUM(x : STRING) RETURNS INTEGER|REAL
+IS_NUM(ThisString : STRING|CHAR) RETURNS BOOLEAN
+ASC(ThisChar : CHAR) RETURNS INTEGER
+CHR(x : INTEGER) RETURNS CHAR
+ThisString1 & ThisString2    // 连接两个字符串
+
+// NUMBER函数
+INT(x : REAL) RETURNS INTEGER
+RAND(x : INTEGER) RETURNS REAL
+MOD(num, 2)     //  取模
+DIV(num, 2)     //  取商
+ROUND(real,2)   //  四舍五入2位小数
+
+// DATE函数
+DAY(ThisDate : DATE) RETURNS INTEGER
+MONTH(ThisDate : DATE) RETURNS INTEGER
+YEAR(ThisDate : DATE) RETURNS INTEGER
+DAYINDEX(ThisDate : DATE) RETURNS INTEGER
+SETDATE(Day, Month, Year : INTEGER) RETURNS DATE
+TODAY() RETURNS DATE
+
+// 操作符
+// 赋值：<-    相等: =     不等于: <>

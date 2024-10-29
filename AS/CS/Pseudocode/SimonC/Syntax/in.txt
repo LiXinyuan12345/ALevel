@@ -1,0 +1,17 @@
+DECLARE oneLine : STRING
+
+OPENFILE "SimonC/Syntax/in.txt" FOR READ
+OPENFILE "SimonC/Syntax/out.txt" FOR WRITE
+
+WHILE NOT EOF("SimonC/Syntax/in.txt")
+    READFILE "SimonC/Syntax/in.txt", oneLine
+    IF oneLine = "" THEN
+        WRITEFILE "SimonC/Syntax/out.txt", "*blank line  " & "\n"
+    ELSE
+        WRITEFILE "SimonC/Syntax/out.txt", oneLine & "\n"
+    ENDIF
+ENDWHILE
+
+CLOSEFILE "SimonC/Syntax/in.txt"
+CLOSEFILE "SimonC/Syntax/out.txt"
+OUTPUT ""
